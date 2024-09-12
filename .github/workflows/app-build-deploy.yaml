@@ -1,6 +1,6 @@
 name: Build & Deploy App
 env:
-  CONTAINER_NAME: kinect-messaging
+  CONTAINER_NAME: kinect-mjml-app
   REGISTRY: ghcr.io
 on:
   workflow_dispatch:

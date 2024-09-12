@@ -9,7 +9,7 @@
       "value": ""
     },
     "containerName": {
-      "value": "kinect-mjml-api"
+      "value": "kinect-mjml-app"
     },
     "containerRegistryName": {
       "value": "ghcr.io"

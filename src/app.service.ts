@@ -13,6 +13,7 @@ import * as mjml2html from 'mjml';
 export class AppService {
   convertMjmlToHtml(mjml: string, options: any = {}): string {
     const mjmlResponse = mjml2html(mjml, options);
+    console.log(`Returning MJML response`);
     return mjmlResponse.html;
   }
 }

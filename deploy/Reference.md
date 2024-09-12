@@ -14,6 +14,8 @@ SUBSCRIPTION_ID=$(az account show -o tsv --query id)
 APP_ID=95dc5ece-d32f-487f-b841-7fceddb2c6d7 
 
 OBJECT_ID=$(az ad app show --id $APP_ID --query id -otsv)
+
+CONTAINERAPPS_ENV_ID=$(az containerapp env show -g dev-apps-rg -n development --query id)
 ```
 
 2. Create Federated Identity credential for Azure AD application
@@ -48,6 +50,7 @@ RESOURCE_GROUP=<resource group name>
 
 # (OPTIONAL)CONTAINER_REGISTRY_NAME: Unique name of the container registry which will be created and where images will be imported
 CONTAINER_REGISTRY_NAME=<container registry name>
+
 ```
 
 5. Configure GitHub Repository secrets
@@ -58,6 +61,8 @@ echo $SUBSCRIPTION_ID
 echo $AZURE_TENANT
 # AZURE_CLIENT_ID
 echo $APP_ID
+# CONTAINERAPPS_ENV_ID
+echo $CONTAINERAPPS_ENV_ID
 ```
 
 ## References
